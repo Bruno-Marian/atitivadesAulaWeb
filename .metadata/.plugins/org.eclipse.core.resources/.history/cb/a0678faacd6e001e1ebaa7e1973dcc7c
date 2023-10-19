@@ -1,0 +1,34 @@
+<%@page import="modelos.Contato"%>
+<%@page import="controler.ContatoControler"%>
+<%@page import="java.sql.ResultSet"%>
+<%@page import="utils.Conexao"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Minha Agenda</title>
+</head>
+<body>
+	<h1>Agenda de Contatos</h1>
+	<a href=contatos/cadastro.jsp>Cadastro</a>
+	<br>
+	<%
+		 Conexao.conectar();
+	
+		//Contato ct = new Contato(2, "Zezinho", "zezinho@uol.com.br");
+		if(ContatoControler.salvar(ct)){
+			out.print("Contato salvo com sucesso <br>");
+		}
+		
+		ResultSet contatos = ContatoControler.consultar();
+		while(contatos.next()){
+			out.print("ID: " + contatos.getString("id"));
+			out.print(" Nome: " + contatos.getString("nome"));
+			out.print(" Email: " + contatos.getString("email"));
+			out.print("<br>");
+		}
+	%>
+</body>
+</html>

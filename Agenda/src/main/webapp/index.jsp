@@ -12,13 +12,15 @@
 </head>
 <body>
 	<h1>Agenda de Contatos</h1>
+	<a href=contatos/cadastro.jsp>Cadastro</a>
+	<br>
 	<%
 		 Conexao.conectar();
 	
-		Contato ct = new Contato(2, "Zezinho", "zezinho@uol.com.br");
-		if(ContatoControler.salvar(ct)){
-			out.print("Contato salvo com sucesso <br>");
-		}
+		//Contato ct = new Contato(2, "Zezinho", "zezinho@uol.com.br");
+		//if(ContatoControler.salvar(ct)){
+			//out.print("Contato salvo com sucesso <br>");
+		//}
 		
 		ResultSet contatos = ContatoControler.consultar();
 		while(contatos.next()){
