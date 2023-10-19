@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Exemplo 1</title>
+</head>
+<body>
+<h1>Exemplo 1</h1>
+<%@include file="exemplo1.jsp" %>
+
+<%
+        // get info from request
+        String email = request.getParameter("email");
+        String password = request.getParameter("password");
+        %>
+
+        <p>Here is the info you provided:</p>
+
+        <table cellspacing="5" cellpadding="5" border="1">
+            <tr>
+                <td align="right">Email:</td>
+                <td><%= email %></td>
+            </tr>
+
+            <tr>
+                <td align="right">Password:</td>
+                <td><%= password %></td>
+            </tr>
+
+        </table>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<%
+	String nome = request.getParameter("nome");
+
+	int idade = Integer.parseInt(request.getParameter("idade"));
+
+	String msg = "maior";
+
+	if(idade < 18){
+		msg = "menor";
+	}
+
+	out.print("<p>Ola " + nome + ", vc tem " + idade + " anos de idade</p>");
+	out.print("<p>Você é " + msg + " de idade.</p>");
+%>

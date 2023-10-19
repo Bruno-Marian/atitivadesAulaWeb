@@ -1,0 +1,7 @@
+package modelos;
+
+public class Contato {
+	private id int;
+	private String nome;
+	private String email;
+}

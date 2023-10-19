@@ -1,0 +1,12 @@
+package controler;
+
+import java.sql.ResultSet;
+
+import utils.Conexao;
+
+public class ContatoControler {
+	static Connection con = Conexao.getConexao();
+	public static ResultSet consultar() {
+		
+	}
+}

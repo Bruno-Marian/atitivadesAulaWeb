@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Exemplo 1</title>
+</head>
+<body>
+<h1>Exemplo 1</h1>
+<script>
+<%@include file="exemplo1.jsp" %>
+</script>
+</body>
+</html>
